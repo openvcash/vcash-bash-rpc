@@ -24,4 +24,4 @@ while getopts ":m:p:" o; do
 done
 
 #set -x
-curl -sS --data-binary '{"jsonrpc":"1.0", "id":"'$id'", "method":"'$method'", "params":'$params'}' -H 'content-type: text/plain;' http://127.0.0.1:9195/ | jq
+curl -sS --data-binary '{"jsonrpc":"1.0", "id":"'$id'", "method":"'$method'", "params":'$params'}' -H 'content-type: text/plain;' http://127.0.0.1:9195/ | jq '.'
