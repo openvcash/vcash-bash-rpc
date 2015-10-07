@@ -1,4 +1,4 @@
-# Bash script to make RPC to vanillacoind on Linux.
+# A bash script for making RPC to vanillacoind on Linux
 
 Dependencies
 ```
