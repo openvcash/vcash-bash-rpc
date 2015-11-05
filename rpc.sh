@@ -9,7 +9,7 @@ while getopts ":m:p:" o; do
             method=${OPTARG}
             ;;
         p)
-            if [[ "${OPTARG}" == \{* ]] ;
+            if [[ "${OPTARG}" =~ ^\{.* || "${OPTARG}" =~ ^\[.* ]] ;
             then
                 params=${OPTARG}
             else
@@ -17,7 +17,7 @@ while getopts ":m:p:" o; do
             fi
             ;;
         *)
-            echo "Usage: ./rpc.sh -m <method> -p <params> | ./rpc.sh -m getincentiveinfo | ./rpc.sh -m getblockhash -p 1 | ./rpc.sh -m listreceivedbyaccount -p '{\"minconf\":1,\"includeempty\":true}'"
+            echo "Usage: ./rpc.sh -m <method> -p <params> | ./rpc.sh -m getincentiveinfo | ./rpc.sh -m getblockhash -p 1 | ./rpc.sh -m sendtoaddress -p '[\"address\",amount]' | ./rpc.sh -m listreceivedbyaccount -p '{\"minconf\":1,\"includeempty\":true}'"
             exit 1
             ;;
     esac
