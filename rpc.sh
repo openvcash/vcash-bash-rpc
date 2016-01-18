@@ -1,7 +1,7 @@
 #!/bin/bash
 method='getinfo'
 params='[]'
-id=`openssl rand -base64 32 | sed 's/[^0-9]//g'`
+id=`od -A n -t d -N 1 /dev/urandom | sed 's/ //g'`
 
 while getopts ":m:p:" o; do
     case "${o}" in
