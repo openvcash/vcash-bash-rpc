@@ -1,4 +1,4 @@
-# A bash script for making RPC to vanillacoind on Linux
+# A bash script for making RPC to vcashd on Linux
 
 Dependencies
 ```
@@ -7,7 +7,7 @@ jq
 
 Get the script and make it executable
 ```
-wget https://raw.githubusercontent.com/whphhg/vanillacoind-rpc/master/rpc.sh
+wget https://raw.githubusercontent.com/whphhg/vcashd-rpc/master/rpc.sh
 chmod +x rpc.sh
 ```
 
